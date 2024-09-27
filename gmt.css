@@ -1,0 +1,689 @@
+.a
+{
+    background-color:black;
+    color:beige;
+    box-sizing: border-box;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position:static;
+    font-size: 19px;
+}
+.b
+{
+    background-color:rgba(0, 0, 0, 0.632);
+    color: white;
+}
+
+.c
+{
+    border-radius: 32px;
+    width:100px;
+    height:30px;
+    color:beige;
+    background-color:orangered;
+}
+#A
+{
+    width:200px;
+    height:100px;
+}
+.gmt-logo
+{
+ margin-top: -20px;
+ margin-bottom: -20px;
+ }
+.d
+{
+    background-image: url("https://www.aldensys.com/hubfs/Asset%20Management%20Software%20Training%20Why%20It%20Matters%20More%20Than%20You%20Think.jpeg");
+    background-size: cover;
+    margin-top: -25px;
+    width:1320px;
+    height:600px;
+    color: beige;
+}
+#B  
+{
+    background-color: black;
+    color: chocolate;
+    width:"500px";
+    height:"60px";
+}
+.col{
+  color:red;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  background: linear-gradient(to left,#03ff75,#00ffea );
+}
+
+.logo {
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-left: 90px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color:white
+  
+}
+
+.nav-links li a:hover {
+  color: white
+}
+.nav-links li a {
+  text-decoration: none;
+  color:white;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: red;
+  transform: scale(1.1);
+}
+
+.neon{
+    background: #000000;
+    display: inline-flex;
+    filter: brightness(200%);
+    overflow: hidden;
+  }
+  
+  .text{
+    color: #FFFFFF;  
+    font-weight: bold;
+    font-family: Arial;
+    text-transform: uppercase;
+  }
+  
+  .text::before{
+    content: attr(data-text);
+    position: absolute;
+    mix-blend-mode: difference;
+    filter: blur(2px);  
+  }
+  
+  .gradient{
+  background: linear-gradient(to right, rgba(5, 117, 230, 1)4.9%, rgba(0, 242, 96, 1)97.8%); 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: multiply;
+  }
+  
+  .dodge{
+    background: radial-gradient(circle, #FFFFFF, #000000 20% ) center/20% 20%;
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    right: 0;
+    bottom: 0;
+    mix-blend-mode: color-dodge;
+    animation: dodge-area 6s linear infinite;
+  }
+  
+  @keyframes dodge-area{
+    to {
+      transform: translate(50%,50%);
+    }
+  }
+  
+  /*Header Title*/
+  .neon-wrapper{
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+  }
+  
+  .neon-wrapper>.neon>.text{
+    font-size: 90px;
+  }
+  .flip{
+    width: 300px;
+    height: 400px;
+    perspective: 1000px;
+}
+.flip-gmt-inner {
+    position: relative;
+    width:100%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+    transition:transform 0.6s;
+    transform-style: preserve-3d;
+}
+.flip:hover .flip-gmt-inner{
+    transform: rotateY(180deg);
+}
+.flip-gmt-front,.flip-gmt-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+}
+.flip-gmt-front{
+    background-color:black;
+    overflow: hidden;
+}
+.flip-gmt-front img{
+    max-height:100%;
+   max-width:100%;
+   margin-top: 50px;
+}
+.flip-gmt-back{       
+    background-color: #555;
+    color: white;
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gmt-content{
+    padding: 20px;
+    text-align: center;
+}
+.gmt-contenth h2{
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.gmt-content p{
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.btn{
+    padding: 10px 20px;
+    background-color: #f1f1f1;
+    color:#333;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.btn:hover{
+    background-color: #333;
+    color: #f1f1f1;
+    }
+    .mm
+    {
+        background-color:rgb(255, 255, 255);
+        color: black;
+       }
+    #ab{
+        margin-bottom: 30px;
+    }
+    *,
+    *::after,
+    *::before {
+      box-sizing: inherit;
+      margin:0;
+       }
+    
+    html { font-size:62.5%;}
+    
+    /* Main heading for card's front cover */
+    .card-front__heading {
+      font-size: 15px;
+      margin-top: -15rem;
+      
+    }
+    
+    /* Main heading for inside page */
+    .inside-page__heading { 
+      padding-bottom: 1rem; 
+      width: 100%;
+    }
+    
+    /* For both inside page's main heading and 'view me' text on card front cover */
+    .inside-page__heading,
+    .card-front__text-view {
+      font-size: 1.3rem;
+      font-weight: 800;
+      margin-top: .2rem;
+    }
+    
+    .inside-page__heading--city,
+    .card-front__text-view--city { color: #ff62b2; }
+    
+    .inside-page__heading--ski,
+    .card-front__text-view--ski { color: #2aaac1; }
+    
+    .inside-page__heading--beach,
+    .card-front__text-view--beach { color: #fa7f67; }
+    
+    .inside-page__heading--camping,
+    .card-front__text-view--camping { color: #00b97c; }
+    
+    /* Front cover */
+    
+    .card-front__tp { color: #fafbfa; }
+    
+    /* For pricing text on card front cover */
+    .card-front__text-price {
+      font-size: 1.5rem;
+      margin-top: 2rem;
+      margin-left: 10px;
+    }
+    
+    /* Back cover */
+    
+    /* For inside page's body text */
+    .inside-page__text {
+      color: #333;
+      font-size: 15.5px;
+    }
+    
+    /* Buttons =================================================*/
+    
+    .inside-page__btn {
+      background-color: transparent;
+      border: 3px solid;
+      border-radius: .5rem;
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-top: 2rem;
+      overflow: hidden;
+      padding: .7rem .75rem;
+      position: relative;
+      text-decoration: none;
+      transition: all .3s ease;
+      width: 90%;
+      z-index: 10;
+    }
+    
+    .inside-page__btn::before { 
+      content: "";
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      transform: scaleY(0);
+      transition: all .3s ease;
+      width: 100%;
+      z-index: -1;
+    }
+    
+    .inside-page__btn--city { 
+      border-color: #ff40a1;
+      color: #ff40a1;
+    }
+    
+    .inside-page__btn--city::before { 
+      background-color: #ff40a1;
+    }
+    
+    .inside-page__btn--ski { 
+      border-color: #279eb2;
+      color: #279eb2;
+    }
+    
+    .inside-page__btn--ski::before { 
+      background-color: #279eb2;
+    }
+    
+    .inside-page__btn--beach { 
+      border-color: #fa7f67;
+      color: #fa7f67;
+    }
+    
+    .inside-page__btn--beach::before { 
+      background-color: #fa7f67;
+    }
+    
+    .inside-page__btn--camping { 
+      border-color: #00b97d;
+      color: #00b97d;
+    }
+    
+    .inside-page__btn--camping::before { 
+      background-color: #00b97d;
+    }
+    
+    .inside-page__btn:hover { 
+      color: #fafbfa;
+    }
+    
+    .inside-page__btn:hover::before { 
+      transform: scaleY(1);
+    }
+    
+    /* Layout Structure=========================================*/
+    
+    .main {
+      background-color: black;
+         justify-content: center;
+      height:300px;
+      width:1340px;
+    }
+    
+    /* Container to hold all cards in one place */
+    .card-area {
+      align-items: center;
+      display: flex;
+      flex-wrap: nowrap;
+      height: 100%;
+      justify-content: space-evenly;
+      padding: 1rem;
+    }
+    
+    /* Card ============================================*/
+    
+    /* Area to hold an individual card */
+    .card-section {
+      align-items: center;
+      display: flex;
+      height: 100%;
+      justify-content: center;
+      width: 100%;
+    }
+    
+    /* A container to hold the flip card and the inside page */
+    .card {
+      background-color: rgba(0,0,0, .05);
+      box-shadow: -.1rem 1.7rem 6.6rem -3.2rem rgba(0,0,0,0.5);
+      height: 15rem;
+      position: relative;
+      transition: all 1s ease;
+      width: 15rem;
+    }
+    
+    /* Flip card - covering both the front and inside front page */
+    
+    /* An outer container to hold the flip card. This excludes the inside page */
+    .flip-card {
+      height: 15rem;
+      perspective: 100rem;
+      position: absolute;
+      right: 0;
+      transition: all 1s ease;
+      visibility: hidden;
+      width: 15rem;
+      z-index: 100;
+    }
+    
+    /* The outer container's visibility is set to hidden. This is to make everything within the container NOT set to hidden  */
+    /* This is done so content in the inside page can be selected */
+    .flip-card > * {
+      visibility: visible;
+    }
+    
+    /* An inner container to hold the flip card. This excludes the inside page */
+    .flip-card__container {
+      height: 100%;
+      position: absolute;
+      right: 0;
+      transform-origin: left;
+      transform-style: preserve-3d;
+      transition: all 1s ease;
+      width: 100%;
+    }
+    
+    .card-front,
+    .card-back {
+      backface-visibility: hidden;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+    
+    /* Styling for the front side of the flip card */
+    
+    /* container for the front side */
+    .card-front {
+      background-color: #fafbfa;
+      height: 15rem;
+      width: 15rem;
+    }
+    
+    /* Front side's top section */
+    .card-front__tp {
+      align-items: center;
+      clip-path: polygon(0 0, 100% 0, 100% 90%, 57% 90%, 50% 100%, 43% 90%, 0 90%);
+      display: flex;
+      flex-direction: column;
+      height: 12rem;
+      justify-content: center;
+      padding: .75rem;
+    }
+    
+    .card-front__tp--city {
+      background: linear-gradient(
+        to bottom,
+        #ff73b9,
+        #ff40a1
+      );
+    }
+    
+    .card-front__tp--ski {
+      background: linear-gradient(
+        to bottom,
+        #47c2d7,
+        #279eb2
+      );
+    }
+    
+    .card-front__tp--beach {
+      background: linear-gradient(
+        to bottom,
+        #fb9b88,
+        #f86647
+      );
+    }
+    
+    .card-front__tp--camping {
+      background: linear-gradient(
+        to bottom,
+        #00db93,
+        #00b97d
+      );
+    }
+    
+    /* Front card's bottom section */
+    .card-front__bt {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+    }
+    
+    /* Styling for the back side of the flip card */
+    
+    .card-back {
+      background-color: #fafbfa;
+      transform: rotateY(180deg);
+    }
+    
+    /* Inside page */
+    
+    .inside-page {
+      background-color: #fafbfa;
+      box-shadow: inset 20rem 0px 5rem -2.5rem rgba(0,0,0,0.25);
+      height: 100%;
+      padding: 1rem;
+      position: absolute;
+      right: 0;
+      transition: all 1s ease;
+      width: 15rem;
+      z-index: 1;
+    }
+    
+    .inside-page__container {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      text-align: center; 
+      width: 100%;
+    }
+    
+    /* Functionality ====================================*/
+    
+    /* This is to keep the card centered (within its container) when opened */
+    .card:hover {
+      box-shadow:
+      -.1rem 1.7rem 6.6rem -3.2rem rgba(0,0,0,0.75);
+      width: 30rem;
+    }
+    
+    /* When the card is hovered, the flip card container will rotate */
+    .card:hover .flip-card__container {
+      transform: rotateY(-180deg);
+    }
+    
+    /* When the card is hovered, the shadow on the inside page will shrink to the left */
+    .card:hover .inside-page {
+      box-shadow: inset 1rem 0px 5rem -2.5rem rgba(0,0,0,0.1);
+    }
+    #about
+    {
+      background-color: aliceblue;
+      }
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+          
+      .air {
+        display: flex;
+        background:black;
+        justify-content: flex-end;
+        align-items: flex-end;
+        min-height: 50vh;
+      }
+      
+      .footer {
+        position: relative;
+        width: 100%;
+        background: #3586ff;
+        min-height: 50px;
+        padding: 20px 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      
+      .social-icon,
+      .menu {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px 0;
+        flex-wrap: wrap;
+      }
+      
+      .social-icon__item,
+      .menu__item {
+        list-style: none;
+      }
+      
+      .social-icon__link {
+        font-size: 5rem;
+        color: #fff;
+        margin: 0 10px;
+        display: inline-block;
+        transition: 0.5s;
+        padding: 5px;
+      }
+      .social-icon__link:hover {
+        transform: translateY(-10px);
+      }
+      
+      .menu__link {
+        font-size: 20px;
+        color: #fff;
+        margin: 0 20px;
+        display: inline-block;
+        transition: 0.5s;
+        text-decoration: none;
+        opacity: 0.75;
+        font-weight: 100;
+      }
+      
+      .menu__link:hover {
+        opacity: 1;
+      }
+      
+      .footer p {
+        color: #fff;
+        margin: 15px 0 10px 0;
+        font-size: 1rem;
+        font-weight: 300;
+      }
+      
+      .wave {
+        position: absolute;
+        top: -100px;
+        left: 0;
+        width: 100%;
+        height: 100px;
+        background: url("https://i.ibb.co/wQZVxxk/wave.png");
+        background-size: 1000px 100px;
+      }
+      
+      .wave#wave1 {
+        z-index: 1000;
+        opacity: 1;
+        bottom: 0;
+        animation: animateWaves 4s linear infinite;
+      }
+      
+      .wave#wave2 {
+        z-index: 999;
+        opacity: 0.5;
+        bottom: 10px;
+        animation: animate 4s linear infinite !important;
+      }
+      
+      .wave#wave3 {
+        z-index: 1000;
+        opacity: 0.2;
+        bottom: 15px;
+        animation: animateWaves 3s linear infinite;
+      }
+      
+      .wave#wave4 {
+        z-index: 999;
+        opacity: 0.7;
+        bottom: 20px;
+        animation: animate 3s linear infinite;
+      }
+      
+      @keyframes animateWaves {
+        0% {
+          background-position-x: 1000px;
+        }
+        100% {
+          background-positon-x: 0px;
+        }
+      }
+      
+      @keyframes animate {
+        0% {
+          background-position-x: -1000px;
+        }
+        100% {
+          background-positon-x: 0px;
+        }
+      }
+       
+  
+
+  
+
+  

@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="gmt.css">
+    
+       <title>
+        GMT HOME
+    </title>
+</head>
+<body class="a">
+    <div class="b"><br><br><br><br>
+                   <nav>
+              <div class="logo">
+                <img src="data:image/png;base64,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" width="150px" height="90px" class="gmt-logo">
+              </div>
+              <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </nav>
+       </div>
+       <br><br>
+  <div class="neon-wrapper">
+    <div class="neon">     
+      <span class="text" data-text="GREAT MINDS TECHNOLOGY">GREAT MINDS TECHNOLOGY</span>
+      <span class="gradient"></span>
+      <span class="dodge"></span>
+   </div>
+  </div><br>
+       <div>
+        <pre>
+            <p class="d">
+               GREAT MINDS TECHNOLOGY
+               Great Minds Technology is a pole star of IT professionals in guiding toward enhancing their professional skills.
+               <a href=""><button id="B">MORE ABOUT US</button></a>
+             </p>
+        </pre>
+    </div>
+    <div>
+        <center><h2 class="col">EXPLORE OUR SERVICES</h2></center>
+        <table cellpadding="15px">
+            <td>        
+                <div class="flip">
+                    <div class="flip-gmt-inner">
+                        <div class="flip-gmt-front">
+                        <img src="https://codingbytes.com/wp-content/uploads/2022/03/full-stack-web-development.jpg">
+                        </div>
+                        <div class="flip-gmt-back">
+                            <div class="gmt-content">
+                                <h2>FULL STACK WEB DEVELOPEMENT</h2>
+                                <p>COMPLETE COURSE</p>
+                                <a href="file:///C:/full%20stack.html" class="btn">Read More</a>
+                            </div>
+                        </div>                                  
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div class="flip">
+                    <div class="flip-gmt-inner">
+                        <div class="flip-gmt-front">
+                        <img src="https://i.pinimg.com/originals/6e/46/e7/6e46e7dbe2bb73dacc055e5dbd85c3ad.png">
+                        </div>
+                        <div class="flip-gmt-back">
+                            <div class="gmt-content">
+                                <h2>C</h2>
+                                <p>COMPLETE COURSE</p>
+                                <a href="c.html" class="btn">Read More</a>
+                            </div>
+                        </div>                                  
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div class="flip">
+                    <div class="flip-gmt-inner">
+                        <div class="flip-gmt-front">
+                        <img src="https://static.vecteezy.com/system/resources/previews/012/697/295/non_2x/3d-python-programming-language-logo-free-png.png">
+                        </div>
+                        <div class="flip-gmt-back">
+                            <div class="gmt-content">
+                                <h2>PYTHON</h2>
+                                <p>COMPLETE COURSE</p>
+                                <a href="python.html" class="btn">Read More</a>
+                            </div>
+                        </div>                                  
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div class="flip">
+                    <div class="flip-gmt-inner">
+                        <div class="flip-gmt-front">
+                        <img src="https://static.vecteezy.com/system/resources/previews/019/899/953/non_2x/java-free-download-free-png.png">
+                        </div>
+                        <div class="flip-gmt-back">
+                            <div class="gmt-content">
+                                <h2>JAVA</h2>
+                                <p>COMPLETE COURSE</p>
+                                <a href="java.html" class="btn">Read More</a>
+                            </div>
+                        </div>                                  
+                    </div>
+                </div>
+            </td>
+          </table>
+          <center><h2 class="col">EXPLORE OUR OTHER COURSES</h2></center>
+        <table cellpadding="15px">
+            <td>
+                <div class="flip">
+                    <div class="flip-gmt-inner">
+                        <div class="flip-gmt-front">
+                        <img src="https://static.vecteezy.com/system/resources/previews/012/697/300/original/3d-c-programming-language-logo-free-png.png">
+                        </div>
+                        <div class="flip-gmt-back">
+                            <div class="gmt-content">
+                                <h2>C++</h2>
+                                <p>COMPLETE COURSE</p>
+                                <a href="c++.html" class="btn">Read More</a>
+                            </div>
+                        </div>                                  
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div class="flip">
+                    <div class="flip-gmt-inner">
+                        <div class="flip-gmt-front">
+                        <img src="https://seeklogo.com/images/C/c-sharp-c-logo-02F17714BA-seeklogo.com.png">
+                        </div>
+                        <div class="flip-gmt-back">
+                            <div class="gmt-content">
+                                <h2>C#</h2>
+                                <p>COMPLETE COURSE</p>
+                                <a href="#" class="btn">Read More</a>
+                            </div>
+                        </div>                                  
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div class="flip">
+                    <div class="flip-gmt-inner">
+                        <div class="flip-gmt-front">
+                        <img src="https://assets.stickpng.com/images/58481791cef1014c0b5e4994.png">
+                        </div>
+                        <div class="flip-gmt-back">
+                            <div class="gmt-content">
+                                <h2>PHP</h2>
+                                <p>COMPLETE COURSE</p>
+                                <a href="#" class="btn">Read More</a>
+                            </div>
+                        </div>                                  
+                    </div>
+                </div>
+            </td>
+           <td>
+            <div class="flip">
+                <div class="flip-gmt-inner">
+                    <div class="flip-gmt-front">
+                    <img src="https://assets.stickpng.com/images/58482ce4cef1014c0b5e4a4c.png">
+                    </div>
+                    <div class="flip-gmt-back">
+                        <div class="gmt-content">
+                            <h2>SWIFT</h2>
+                            <p>COMPLETE COURSE</p>
+                            <a href="#" class="btn">Read More</a>
+                        </div>
+                    </div>                                  
+                </div>
+            </div>
+           </td>
+        </table>  
+        <center><h2 class="col">EXPLORE OUR BASIC COURSES</h2></center>
+        <table cellpadding="15px">
+            <td>
+                <div class="flip">
+                    <div class="flip-gmt-inner">
+                        <div class="flip-gmt-front">
+                        <img src="https://cdn-icons-png.flaticon.com/512/6119/6119533.png">
+                        </div>
+                        <div class="flip-gmt-back">
+                            <div class="gmt-content">
+                                <h2>IOT-INTERNET OF THINGS</h2>
+                                <p>COMPLETE COURSE</p>
+                                <a href="#" class="btn">Read More</a>
+                            </div>
+                        </div>                                  
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div class="flip">
+                    <div class="flip-gmt-inner">
+                        <div class="flip-gmt-front">
+                        <img src="https://static.vecteezy.com/system/resources/previews/022/719/498/non_2x/cute-robot-chatbot-ai-bot-character-design-illustration-ai-technology-and-cyber-character-futuristic-technology-service-and-communication-artificial-intelligence-concept-free-png.png">
+                        </div>
+                        <div class="flip-gmt-back">
+                            <div class="gmt-content">
+                                <h2>ROBOTICS</h2>
+                                <p>COMPLETE COURSE</p>
+                                <a href="#" class="btn">Read More</a>
+                            </div>
+                        </div>                                  
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div class="flip">
+                    <div class="flip-gmt-inner">
+                        <div class="flip-gmt-front">
+                        <img src="https://w7.pngwing.com/pngs/251/36/png-transparent-bhopal-tally-solutions-tally-institute-of-learning-training-tally-miscellaneous-text-class-thumbnail.png">
+                        </div>
+                        <div class="flip-gmt-back">
+                            <div class="gmt-content">
+                                <h2>TALLY</h2>
+                                <p>COMPLETE COURSE</p>
+                                <a href="#" class="btn">Read More</a>
+                            </div>
+                        </div>                                  
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div class="flip">
+                    <div class="flip-gmt-inner">
+                        <div class="flip-gmt-front">
+                        <img src="https://www.freepnglogos.com/uploads/photoshop-png-logo/photoshop-cc-splash-png-logo-3.png">
+                        </div>
+                        <div class="flip-gmt-back">
+                            <div class="gmt-content">
+                                <h2>PHOTOSHOP</h2>
+                                <p>COMPLETE COURSE</p>
+                                <a href="#" class="btn">Read More</a>
+                            </div>
+                        </div>                                  
+                    </div>
+                </div>
+            </td>
+          </table>
+          <center><h2 class="col">COURSES FOR JUNIORS</h2></center>
+        <table cellpadding="15px">
+            <td>
+                <div class="flip">
+                    <div class="flip-gmt-inner">
+                        <div class="flip-gmt-front">
+                        <img src="https://static.vecteezy.com/system/resources/previews/009/343/603/non_2x/3d-internet-connection-illustration-free-png.png">
+                        </div>
+                        <div class="flip-gmt-back">
+                            <div class="gmt-content">
+                                <h2>INTERNET-CONCEPTS</h2>
+                                <p>COMPLETE COURSE</p>
+                                <a href="#" class="btn">Read More</a>
+                            </div>
+                        </div>                                  
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div class="flip">
+                    <div class="flip-gmt-inner">
+                        <div class="flip-gmt-front">
+                        <img src="https://static.vecteezy.com/system/resources/previews/022/100/963/non_2x/microsoft-logo-transparent-free-png.png">
+                        </div>
+                        <div class="flip-gmt-back">
+                            <div class="gmt-content">
+                                <h2>MICROSOFT OFFICE</h2>
+                                <p>COMPLETE COURSE</p>
+                                <a href="#" class="btn">Read More</a>
+                            </div>
+                        </div>                                  
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div class="flip">
+                    <div class="flip-gmt-inner">
+                        <div class="flip-gmt-front">
+                        <img src="https://static.vecteezy.com/system/resources/previews/011/064/686/non_2x/social-media-and-digital-marketing-3d-illustration-free-png.png">
+                        </div>
+                        <div class="flip-gmt-back">
+                            <div class="gmt-content">
+                                <h2>SOCIAL MEDIA</h2>
+                                <p>COMPLETE COURSE</p>
+                                <a href="#" class="btn">Read More</a>
+                            </div>
+                        </div>                                  
+                    </div>
+                </div>
+            </td>
+           <td>
+            <div class="flip">
+                <div class="flip-gmt-inner">
+                    <div class="flip-gmt-front">
+                    <img src="https://static.vecteezy.com/system/resources/previews/009/305/109/non_2x/old-vintage-pc-clipart-design-illustration-free-png.png">
+                    </div>
+                    <div class="flip-gmt-back">
+                        <div class="gmt-content">
+                            <h2>COMPUTER BASICS</h2>
+                            <p>COMPLETE COURSE</p>
+                            <a href="#" class="btn">Read More</a>
+                        </div>
+                    </div>                                  
+                </div>
+            </div>
+           </td>
+        </table>  
+    </div>
+    <div>
+        <table id="ab">
+            <tr>
+                <td class="mm">
+                    <h1>
+                        CONTACT US IF YOU HAVE<br> ANY QUESTIONS?
+                    </h1><br><br><br>
+                   <center> <a href=""><button style="width: 300px;background-color: chocolate;color:black">CONTACT</button></a></center>
+                </td>
+                <td>
+                    <img src="https://media.istockphoto.com/id/1143681097/video/female-hands-interact-hud-hologram-contact-us.jpg?s=640x640&k=20&c=dbN38vGq0JSSLwgiRVOHPmpz8-6aD5A3Bb00UQCh5ps=" width="900px" height="400px">
+                                   </td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <center><h1 class="col">OUR STAFFS</h1></center>
+        <main class="main">
+
+            <section class="card-area">
+                   <!-- Card: JOHN VICTOR -->
+                   <section class="card-section">
+                    <div class="card">
+                        <div class="flip-card">
+                            <div class="flip-card__container">
+                                <div class="card-front">
+                                    <div class="card-front__tp card-front__tp--city">
+                                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                        viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve" class="card-front__icon">
+                                 </svg>
+        
+                                   <h1 class="card-front__heading">
+                                   RAHUL
+                                </h1>
+                                <p class="card-front__text-price">
+                                   FOUNDER 
+                                </p>
+                                    </div>
+                           <div class="card-front__bt">
+                                        <p class="card-front__text-view card-front__text-view--city">
+                                            View me
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="card-back">
+                                  <img src="data:image/webp;base64,UklGRlIJAABXRUJQVlA4IEYJAADQPgCdASqYAJUAPt1epk4opSMpLhKdaSAbiWIAxNZx3H63Z3eV2RCAsQiu6eYQJeojLZ4HvsYNtOxDMjirxGI7t0Yb6mqlx8dd1HB9eEa2onjsAuvQ5inSfcHMb7Cvm+47sMuUxU7IaCaJSnvb5KYBx74ndUyW1RFlMKRF9cGmoteDBHoHL+vtIVvYypag8HMJR58gWl+BJlwuMlmfpIsGVVv5nSApdyPoC4bdTzGCFcSQbievX8EDv7ULHqmZPcV/C6IadowbLgK8axVfE6yDwyzRvxd1H9JmGItP2zEqjaXGWQrABPNbdCbmJfvL2kNtzT2upLB2A+fJ5J5lympTTigEcJJL2OlDr69PdwEgD+HYOhERQPkeUppf5yGTeRhZJrbqvbLrCXl6u0OVL2kvhwCK31WqBcGqYwmDK+dRrIHKi7/RJGWwfunvEqemPnhb8/x8tiiqV3yj/DGCFUxYiQqrczsd8tL+XWSVsyRO0YZPGlmu0BDBJT0CykNpekwTPavC6Cu4ujoWotVjKeca2db+bT/qSXivoDIRNFSSixlhlcNjt9T/tUAUuYv424n8CgkozyKft9zJVifJ6xUSxrPhB/r0dSmx4iQUjMFbriQutGH+G7uWyVAo/uOwB3+2xXoYDuXRZvuHBPQ2K70HjctY5nuAoiQvSqEumMGoAP6iKPVX6UfqNvudC0ngy3w5+ZqT3S9QkLKJZyQA6k8bwTKogR0iLfjru8bxPVGgEdmov95NaopFf5k84joWNmHrdwFzQhIeoKgX9S+N7DG9Uf2lTaO2EG5YqWIOLaEXlfRM2fFh7X5bNEZqJr+wclrRnTaMNMinL+CWdKl1qHsR86BRzKkEnITZ1IB9NfsvhloYTWz4wjiBjL6b5N0iJaUqVfvuzUR8TwSPCkd+EI3+XC8WYfBFV5VEyvRutcIHOHdEtZk67NpiVrUAaSxPstiUfYxdU3evX+LcPcvRGp/wYFNKbi8iiORD92QEuLXgLyWjMdO9gid8F0Ll9OvAVvdFnvFNGwP8+WcVaITIgY0q5Qu9YEL2Ko7r22gLDbVCeK9TlDw/r2gE0VNsSvUIZZltVNfubQyIpyQMdDAgain+HZuvtLaTglKZajR4DloK6q9DWgt2o69C4XYAg6rC9w4GWQC7B0tC4DThoM1mo7nqzSaSZ8kaDpLIOURyJO/NXASVDsiwSLLr9SRDnohy0tes0rP0jHuF+xnORLoMTEmrB4w1+cM0x0hsF3RzoSG4Vkj8X5pv8uhqEwdUDdCTj2eLDVmHpwH0u6TzaJtY0t3+BBetC4e592aAvY0epNwKajJmQLWHG71In5pdii+ddNX9Djlme6p29EqW/e8brUDUw6c55AAP9VhhmqFc2mluQS++KDFq8HJ118ZzeuopD4xOkPl5HN4vrlBGvjtpbuf3GOJ+mOEn59kULD/aj0CEDYQsycAQHs1mpF/OqYCU90TOdYjSNwOm8y0MAJyU1E7Xjyy/Ja4PgZHTi/VVfqyPwAq78RQDcJoroD025bCzAEmRKj7pdT5Q0lrUIcrV02fuFLLyhJ6KK54yu5kLq+En90RfFPQ8NxqoMPuIi0DxEpwVji0Zvpk5zog8RXz5KmzDNn4fVISl+HhKBL0kq/8UIxYPDy6wLkkNIOHA4D+L2/cElWk1k4wnsKOYFntkZ/prXHjrk7oQZykoVgsSfohlRTDhq71E5lYiHL11jqBN1i9044EIyS56NkxwSlnLeF6zufocegvlwfX9z4cZalCeUOwL1X8VeusrBZt2n5bJg5d1IyrC6Og3oSRAcHqjGggKVxZS780fvSwtoJyQvqEsQkL4k9Ih0m7OSUMHMMEOq5pJlm68MinAcZ1X/0DPZEyrCtdulKwC9dRuk5tgFp/lpB40RHmrAsLyIVYYM5s6AVOmIfyb4Be7IiwmRFLA8OK03bfM+W0qBnsvSZN8E5uoJ4FIFSRZ0ajB9UBfmurjZBQinLz+WCaM9qvGIwA1F4drI4cYZmpplhd6n8Xxf32Cg1VXq3Fr/74/NJ8z2Km/ptXF61NRUMr5w+GdHM8peWEfdURF39wNCDbkv6CdPNim1ynYDMwKbnQ5x0pHt4LY0pUWaeMgkaAG3+DCZwDaTBhhQQcHUORdXmRQBhrUtvE4+sY3HqevYSDms/6vcWWyXXVgd0aUzBIp1enUWM/PpY5VS3i0NR19Mw5ZwuLzCrQi4QGE7bdJN6MyQKoUuags+akMuPwasbYBqDfU8Mpx6ZPognZ9zPHE8jrt8R5TJPoKDP5LxB25BGwy3OrlF1xDUZk9PaOeXxRQSbbN3/MeRk1njOGFSE8c7j1lFKwkLxWMuyG4diM37wPlPbp1xOg42C2hxwZwcMIUD/zaXqqCc/bZOLk5LMsVADStthMycp3ZWS5DM8sr9Lko8gVkt3XrfSnNZvFANyRAikpHRD8aDJ/RlKuX7LFGcpmr432JrObRRF3qDIXAg6mPFbCxLyjl2AOEMoEFV/LTF0dPdFDNYkoMKt2sS+a0srrec8tx2yvKUGJV5PSQ4MVvaPGm1nB9kOnvxbO7ccN+r+vEUyRZrxsb/OGE3DsoZCyb2lygvFHA1VnM3Qu4iVmCshTctzYzxBjHLKkGvVE7lREsSTft7PsNp5ZfVmUpNjYvjAD5MwYkRHRBa8rNBV89vz2EP+Pctqb20OQC4dj+/b+UpOtC/EGNPiWd616LGyPboDkZHDLzg4OjIROZthjeK4xZpIepEqNb2RAFPnK10Dh21QBS+ArAwqqc2kLM9shfEXHXePxXpW8FIg6y/hV13pgyGMdIQMEMryB/PHdm4qduQGgCkRpBu7o2z8urKYXlYJun5ms00WWrztLr4nL3sp0uT+K0ibRBuWl3Kc/qt9hmcDOQBo8hxEfhvOLdcrwFtLzhoYruT23ac6cgTduYMOA1raZTQmxUoiBs56JmUfabgsk/31sJ3sDCNJw9C63yEDgS0Mssx3p7bWQ4XVFp/JvCT/O0BImstytr3QM4/1i1dkjYcC4+/Q/viuZ0CcTstpIi7abBMhPQsFvNclUq4nk55nyLzkGjFF6UTHHrE72SXNekN+ZedeIp25TgxsbqwAxsOEmpBX8yJiL8hSgcwALefCRLnO5F4oAFH4guuYubCEtZsl6kqz1iRAAA">
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="inside-page">
+                            <div class="inside-page__container">
+                                <h3 class="inside-page__heading inside-page__heading--city">
+                                   RAHUL 
+                                </h3>
+                                <p class="inside-page__text">
+                                 <small> FOUNDER OF GREAT MINDS TECHNOLOGY</small>
+                                </p>
+                                <a href="#" class="inside-page__btn inside-page__btn--city">View about me</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>                 
+                <!-- Card: rajkumar -->
+                <section class="card-section">
+                    <div class="card">
+                        <div class="flip-card">
+                            <div class="flip-card__container">
+                                <div class="card-front">
+                                    <div class="card-front__tp card-front__tp--ski">
+                                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                        viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve" class="card-front__icon">
+                                     </svg>
+             <h1 class="card-front__heading">
+              MICHEAL
+            </h1>
+            <p class="card-front__text-price">
+                SQL DEVELOPER
+            </p>
+        </div>
+                                    <div class="card-front__bt">
+                                        <p class="card-front__text-view card-front__text-view--ski">
+                                            View me
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="card-back">
+                                    <img src="data:image/webp;base64,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"width="150px" height="150px">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="inside-page">
+                            <div class="inside-page__container">
+                                <h3 class="inside-page__heading inside-page__heading--ski">
+                                    MICHEAL STEVEWAUGH
+                                </h3>
+                                <p class="inside-page__text">
+                                   <small>WORKING AS SQL TRAINER</small>
+                                </p>
+                                <a href="#" class="inside-page__btn inside-page__btn--ski">View about me</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+        
+                <!-- Card: ROJER -->
+                <section class="card-section">
+                    <div class="card">
+                        <div class="flip-card">
+                            <div class="flip-card__container">
+                                <div class="card-front">
+                                    <div class="card-front__tp card-front__tp--beach">
+                                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                        viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve" class="card-front__icon">
+                                       </svg>
+                                     <h2 class="card-front__heading">
+                                                    ANTRO  
+                                                   </h2>
+                                                   <p class="card-front__text-price">
+                                                    DATA BASE  
+                                                   </p>
+                                    </div>
+                                    <div class="card-front__bt">
+                                        <p class="card-front__text-view card-front__text-view--beach">
+                                            View me
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="card-back">
+                                    <img src="data:image/webp;base64,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">
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="inside-page">
+                            <div class="inside-page__container">
+                                <h3 class="inside-page__heading inside-page__heading--beach">
+                                    ANTRO 
+                                </h3>
+                                <p class="inside-page__text">
+                                   <small> WORKING AS DATA BASE TRAINER</small>
+                                </p>
+                                <a href="#" class="inside-page__btn inside-page__btn--beach">View about me</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+        
+                <!-- Card: sasik-->
+                <section class="card-section">
+                    <div class="card">
+                        <div class="flip-card">
+                            <div class="flip-card__container">
+                                <div class="card-front">
+                                    <div class="card-front__tp card-front__tp--camping">
+                                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                        viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve" class="card-front__icon">
+                                   </svg>
+                                                   <h2 class="card-front__heading">
+                                                      BHUVANESH
+                                                   </h2>
+                                                   <p class="card-front__text-price">
+                                                       FRONT-END DEVELOPER
+                                                   </p>
+                                    </div>
+        
+                                    <div class="card-front__bt">
+                                        <p class="card-front__text-view card-front__text-view--camping">
+                                            View me
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="card-back">
+                                    <img src="data:image/webp;base64,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" width="150px" height="150px">
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="inside-page">
+                            <div class="inside-page__container">
+                                <h3 class="inside-page__heading inside-page__heading--camping">
+                                   BHUVANESH
+                                </h3>
+                                <p class="inside-page__text">
+                                  <small>WORKING AS FRONT-END TRAINER</small>
+                                </p>
+                                <a href="#" class="inside-page__btn inside-page__btn--camping">View about me</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Card: roger -->
+                <section class="card-section">
+                    <div class="card">
+                        <div class="flip-card">
+                            <div class="flip-card__container">
+                                <div class="card-front">
+                                    <div class="card-front__tp card-front__tp--city">
+                                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                        viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve" class="card-front__icon">
+                                 </svg>
+        
+                                   <h1 class="card-front__heading">
+                                   
+                                </h1>
+                                <p class="card-front__text-price">
+                                  dfghyuj
+                                </p>
+                                    </div>
+                           <div class="card-front__bt">
+                                        <p class="card-front__text-view card-front__text-view--city">
+                                            View me
+                                        </p>
+ 0                                   </div>
+                                </div>
+                                <div class="card-back">
+                                  <img src="https://media.licdn.com/dms/image/C510BAQFPHYaOcJxGOA/company-logo_200_200/0/1550735613756?e=2147483647&v=beta&t=CJ_qqOxlSOYxwUYH5tfi52shPwao4FYilOsdhHjDA5Y"width="100" heigth="100">
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="inside-page">
+                            <div class="inside-page__container">
+                                <h3 class="inside-page__heading inside-page__heading--city">
+                                    ertgyhu
+                                </h3>
+                                <p class="inside-page__text">
+                                  d5rf6tg7yhujik
+                                </p>
+                                <a href="#" class="inside-page__btn inside-page__btn--city">View about me</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Card:yuvaraj kumar -->
+                <section class="card-section">
+                    <div class="card">
+                        <div class="flip-card">
+                            <div class="flip-card__container">
+                                <div class="card-front">
+                                    <div class="card-front__tp card-front__tp--ski">
+                                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                        viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve" class="card-front__icon">
+                                     </svg>
+                                                   <h1 class="card-front__heading">
+                                                    YUVARAJ KUMAR B
+                                                </h1>
+                                                   <p class="card-front__text-price">
+                                                       GREAT MINDS TECHNOLOGY
+                                                   </p>
+                                    </div>
+        
+                                    <div class="card-front__bt">
+                                        <p class="card-front__text-view card-front__text-view--ski">
+                                            View me
+                                        </p>
+                                    </div>
+                                </div>
+        
+                                <div class="card-back">
+                                    <img src="https://media.licdn.com/dms/image/C5603AQGMabiZwJtqFA/profile-displayphoto-shrink_800_800/0/1663062543401?e=2147483647&v=beta&t=hRqv4WVsBG_1os9gzrob9o6CZazeq3U2efvfB_WLRaw" width="150px" height="150px">
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="inside-page">
+                            <div class="inside-page__container">
+                                <h4 class="inside-page__heading inside-page__heading--ski">
+                                    YUVARAJ KUMAR B
+                                </h4>
+                                <p class="inside-page__text">
+                                 <small>
+                                    WORKING AS A PHOTOSHOP TRAINER
+                                 </small>
+                                </p>
+                                <a href="#" class="inside-page__btn inside-page__btn--ski">View about me</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+        </main>
+        <main class="main">
+
+            <section class="card-area">
+                   <!-- Card: JOHN VICTOR -->
+                   <section class="card-section">
+                    <div class="card">
+                        <div class="flip-card">
+                            <div class="flip-card__container">
+                                <div class="card-front">
+                                    <div class="card-front__tp card-front__tp--city">
+                                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                        viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve" class="card-front__icon">
+                                 </svg>
+        
+                                   <h1 class="card-front__heading">
+                                   JOHN VICTOR M
+                                </h1>
+                                <p class="card-front__text-price">
+                                  GREAT MINDS TECHNOLOGY
+                                </p>
+                                    </div>
+                           <div class="card-front__bt">
+                                        <p class="card-front__text-view card-front__text-view--city">
+                                            View me
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="card-back">
+                                  <img src=""width="100" heigth="100">
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="inside-page">
+                            <div class="inside-page__container">
+                                <h3 class="inside-page__heading inside-page__heading--city">
+                                    JOHN VICTOR M 
+                                </h3>
+                                <p class="inside-page__text">
+                                 <small> WORKING IN GREAT MINDS TECHNOLOGY</small>
+                                </p>
+                                <a href="#" class="inside-page__btn inside-page__btn--city">View about me</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>                 
+                <!-- Card: rajkumar -->
+                <section class="card-section">
+                    <div class="card">
+                        <div class="flip-card">
+                            <div class="flip-card__container">
+                                <div class="card-front">
+                                    <div class="card-front__tp card-front__tp--ski">
+                                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                        viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve" class="card-front__icon">
+                                     </svg>
+             <h1 class="card-front__heading">
+              RAJKUMAR
+            </h1>
+            <p class="card-front__text-price">
+                  GREAT MINDS TECHNOLOGY
+            </p>
+        </div>
+                                    <div class="card-front__bt">
+                                        <p class="card-front__text-view card-front__text-view--ski">
+                                            View me
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="card-back">
+                                    <img src="https://images.click.in/classifieds/images/72/52054241_7_4_2023_09_42_35_18"width="150px" height="150px">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="inside-page">
+                            <div class="inside-page__container">
+                                <h3 class="inside-page__heading inside-page__heading--ski">
+                                    RAJKUMAR
+                                </h3>
+                                <p class="inside-page__text">
+                                   <small>WORKING IN GREAT MINDS TECHNOLOGY</small>
+                                </p>
+                                <a href="#" class="inside-page__btn inside-page__btn--ski">View about me</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+        
+                <!-- Card: ROJER -->
+                <section class="card-section">
+                    <div class="card">
+                        <div class="flip-card">
+                            <div class="flip-card__container">
+                                <div class="card-front">
+                                    <div class="card-front__tp card-front__tp--beach">
+                                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                        viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve" class="card-front__icon">
+                                       </svg>
+                                     <h2 class="card-front__heading">
+                                                    M J ROGER   
+                                                   </h2>
+                                                   <p class="card-front__text-price">
+                                                    FRONT-END DEVELOPER  
+                                                   </p>
+                                    </div>
+                                    <div class="card-front__bt">
+                                        <p class="card-front__text-view card-front__text-view--beach">
+                                            View me
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="card-back">
+                                    <img src="">
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="inside-page">
+                            <div class="inside-page__container">
+                                <h3 class="inside-page__heading inside-page__heading--beach">
+                                    M J ROGER
+                                </h3>
+                                <p class="inside-page__text">
+                                   <small> WORKING AS A FRONT-END TRAINER</small>
+                                </p>
+                                <a href="#" class="inside-page__btn inside-page__btn--beach">View about me</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+        
+                <!-- Card: sasik-->
+                <section class="card-section">
+                    <div class="card">
+                        <div class="flip-card">
+                            <div class="flip-card__container">
+                                <div class="card-front">
+                                    <div class="card-front__tp card-front__tp--camping">
+                                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                        viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve" class="card-front__icon">
+                                   </svg>
+                                                   <h2 class="card-front__heading">
+                                                      SASIK
+                                                   </h2>
+                                                   <p class="card-front__text-price">
+                                                       
+                                                   </p>
+                                    </div>
+        
+                                    <div class="card-front__bt">
+                                        <p class="card-front__text-view card-front__text-view--camping">
+                                            View me
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="card-back">
+                                    <img src="">
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="inside-page">
+                            <div class="inside-page__container">
+                                <h3 class="inside-page__heading inside-page__heading--camping">
+                                   
+                                </h3>
+                                <p class="inside-page__text">
+                                  
+                                </p>
+                                <a href="#" class="inside-page__btn inside-page__btn--camping">View about me</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Card: roger -->
+                <section class="card-section">
+                    <div class="card">
+                        <div class="flip-card">
+                            <div class="flip-card__container">
+                                <div class="card-front">
+                                    <div class="card-front__tp card-front__tp--city">
+                                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                        viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve" class="card-front__icon">
+                                 </svg>
+        
+                                   <h1 class="card-front__heading">
+                                   
+                                </h1>
+                                <p class="card-front__text-price">
+                                  dfghyuj
+                                </p>
+                                    </div>
+                           <div class="card-front__bt">
+                                        <p class="card-front__text-view card-front__text-view--city">
+                                            View me
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="card-back">
+                                  <img src=""width="100" heigth="100">
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="inside-page">
+                            <div class="inside-page__container">
+                                <h3 class="inside-page__heading inside-page__heading--city">
+                                    ertgyhu
+                                </h3>
+                                <p class="inside-page__text">
+                                  d5rf6tg7yhujik
+                                </p>
+                                <a href="#" class="inside-page__btn inside-page__btn--city">View about me</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Card:yuvaraj kumar -->
+                <section class="card-section">
+                    <div class="card">
+                        <div class="flip-card">
+                            <div class="flip-card__container">
+                                <div class="card-front">
+                                    <div class="card-front__tp card-front__tp--ski">
+                                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                        viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve" class="card-front__icon">
+                                     </svg>
+                                                   <h1 class="card-front__heading">
+                                                    YUVARAJ KUMAR B
+                                                </h1>
+                                                   <p class="card-front__text-price">
+                                                       GREAT MINDS TECHNOLOGY
+                                                   </p>
+                                    </div>
+        
+                                    <div class="card-front__bt">
+                                        <p class="card-front__text-view card-front__text-view--ski">
+                                            View me
+                                        </p>
+                                    </div>
+                                </div>
+        
+                                <div class="card-back">
+                                    <img src="" width="150px" height="150px">
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="inside-page">
+                            <div class="inside-page__container">
+                                <h4 class="inside-page__heading inside-page__heading--ski">
+                                    YUVARAJ KUMAR B
+                                </h4>
+                                <p class="inside-page__text">
+                                 <small>
+                                    WORKING AS A PHOTOSHOP TRAINER
+                                 </small>
+                                </p>
+                                <a href="#" class="inside-page__btn inside-page__btn--ski">View about me</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>                    
+    </div>       
+    <div class="air">
+        <footer class="footer">
+                    <div class="waves">
+              <div class="wave" id="wave1"></div>
+              <div class="wave" id="wave2"></div>
+              <div class="wave" id="wave3"></div>
+              <div class="wave" id="wave4"></div>
+            </div>
+                        <ul class="social-icon">
+              <li class="social-icon__item"><a class="social-icon__link" href="https://www.facebook.com/people/Greatminds-Tenkasi/pfbid02n16fdMbVUf3rjjZKWtekEGtvszMDxB1D8nxVz6mqih2Y7rWHkYwtxUh5jgqvJbJGl/">
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </a></li>
+              <li class="social-icon__item"><a class="social-icon__link" href="#">
+                  <ion-icon name="logo-twitter"></ion-icon>
+                </a></li>
+              <li class="social-icon__item"><a class="social-icon__link" href="https://in.linkedin.com/in/great-minds-technology-tenkasi-77a7b4267?original_referer=https%3A%2F%2Fwww.google.com%2F">
+                  <ion-icon name="logo-linkedin"></ion-icon>
+                </a></li>
+              <li class="social-icon__item"><a class="social-icon__link" href="https://www.instagram.com/greatmindstechnologytenkasi/">
+                  <ion-icon name="logo-instagram"></ion-icon>
+                </a></li>
+                <li class="social-icon__item"><a class="social-icon__link" href="#">
+                    <ion-icon name="logo-whatsapp"></ion-icon>
+                  </a></li>
+                
+            </ul>
+            <ul class="menu">
+              <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
+              <li class="menu__item"><a class="menu__link" href="#">About</a></li>
+              <li class="menu__item"><a class="menu__link" href="#">Services</a></li>
+              <li class="menu__item"><a class="menu__link" href="#">Team</a></li>
+              <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
+        
+            </ul>
+            <p>&copy;2023 Great Minds Technology | All Rights Reserved</p>
+        
+          </footer>
+          <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+          <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </div>
+</body>
+</html>

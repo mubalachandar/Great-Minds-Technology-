@@ -1,0 +1,147 @@
+.a
+{
+    background-color:black;
+    color:beige;
+}
+.b
+{
+    background-color:rgba(0, 0, 0, 0.632);
+}
+.c
+{
+    border-radius: 32px;
+    width:100px;
+    height:30px;
+    color:beige;
+    background-color:orangered;
+}
+.gmt-logo
+{
+ margin-top: -20px;
+ 
+}
+#A
+{
+    width:200px;
+    height:100px;
+}
+.d
+{
+    background-image: url("https://www.aldensys.com/hubfs/Asset%20Management%20Software%20Training%20Why%20It%20Matters%20More%20Than%20You%20Think.jpeg");
+    background-size: cover;
+    margin-top: -25px;
+    width:1320px;
+    height:600px;
+    color: beige;
+}
+.g
+{
+    color:rgba(255, 219, 39, 0.952);
+}
+#f
+{
+    width:300px;
+    background-color: chocolate;
+    border-radius:10px;
+    height:30px;
+}
+.h
+{
+    margin-top:-5px;
+    background-color:rgb(194, 244, 228);
+}
+.y
+{
+    width:100px;
+    height:100px;
+    border-radius: 10px;
+}
+#y
+{
+    color:black
+}
+.k
+{
+    background-color: aliceblue;
+    border-radius: 100px;
+
+}
+#k
+{
+    background-image:url("https://venturebeat.com/wp-content/uploads/2021/05/GettyImages-1291886933-e1624308433688.jpg?fit=2309%2C1154&strip=all");
+    background-size: cover;
+    width:1320px;
+    height:300px; 
+    color:rgb(228, 239, 11);
+    filter: brightness(100%);
+    margin-top:-5px;
+    margin:5px;
+}
+.f
+{
+     background-color: gold;
+     width:150px;
+     height:30px;
+}
+.gg{
+    background-image: linear-gradient(to bottom left,purple,rgb(230, 99, 189));
+}
+.dd
+{
+    margin-left: 90px;
+}
+#o
+{
+background-color:yellowgreen;
+font-size: 20px;
+}
+#ll
+{
+    width:180px;
+    height:20px;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    
+  }
+  
+  .logo {
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+  }
+  
+  .nav-links li {
+    margin-left: 90px;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color:white
+    
+  }
+  
+  .nav-links li a:hover {
+    color: white
+  }
+  .nav-links li a {
+    text-decoration: none;
+    color:white;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .nav-links li a:hover {
+    color: red;
+    transform: scale(1.1);
+  }
